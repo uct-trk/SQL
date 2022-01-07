@@ -1,0 +1,34 @@
+const posts = [
+    {name: "POST 1"},
+    {name: "POST 2"},
+    {name: "POST 3"},
+    {name: "POST 4"},
+    {name: "POST 5"},
+]
+
+const postSirala = () => {
+    posts.map((post) => {
+        console.log(post.name)
+    })
+}
+
+const postEkle = (yeniPost) => {
+    const promise1 = new Promise((resolve, reject) => {
+        posts.push(yeniPost)
+        resolve(posts)
+    })
+    return promise1
+}
+
+async function postlariGoster(){
+    try {
+        console.log("Eski Post")
+        await postSirala()
+        console.log("Yeni Post")
+        await postEkle({name: "POST UGURCAN"})
+        await postSirala()
+    } catch (error) {
+        console.log(error)
+    }
+}
+postlariGoster()
