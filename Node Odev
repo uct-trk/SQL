@@ -1,1 +1,6 @@
 
+function daire(r){
+  return alan = Math.PI * r
+}
+console.log(daire(1))
+
