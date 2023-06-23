@@ -14,3 +14,13 @@ WHERE age > 30;
 
 -- aktor tablosundan first_name karakter sayısı 10'dan buyuk olanları getir
 SELECT * FROM actor WHERE LENGTH(first_name) > 10;
+
+-- aktor adı penelope olanı getir
+SELECT * 
+FROM actor 
+WHERE first_name = 'Penelope';
+
+-- rental rate 4.99'a eşit olmayanları getirir
+SELECT * 
+FROM film
+WHERE rental_rate != 4.99;
